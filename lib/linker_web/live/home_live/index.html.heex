@@ -11,7 +11,7 @@
         <div class=" w-[300px] sm:w-[420px] relative rounded-lg shadow-xl bg-tertiary border-2 border-tertiary hover:border-white px-6 py-5 flex items-center space-x-3">
           <div class="flex-shrink-0"></div>
           <div class="flex-1 min-w-0">
-            <%= link to: link.url, phx_click: "increment-clicks", phx_value_id: link.id do %>
+            <%= link to: Routes.shortner_path(@socket, :show, link.slug) do %>
               <span class="absolute inset-0" aria-hidden="true"></span>
               <p class="text-xl text-white font-bold">
                 <%= link.emoji %> <%= link.title %>

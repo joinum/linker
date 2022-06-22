@@ -39,6 +39,10 @@ defmodule Linker.Shortener do
   """
   def get_link!(id), do: Repo.get!(Link, id)
 
+  def get_link(attrs) when is_list(attrs) do
+    Repo.get_by(Link, attrs)
+  end
+
   @doc """
   Creates a link.
 

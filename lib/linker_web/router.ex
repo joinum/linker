@@ -22,6 +22,8 @@ defmodule LinkerWeb.Router do
 
     live "/", HomeLive.Index, :index
 
+    get "/:slug", ShortnerController, :show
+
     get "/_version", InfoController, :version
   end
 
